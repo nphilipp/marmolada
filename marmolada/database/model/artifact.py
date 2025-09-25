@@ -27,7 +27,7 @@ from ..mixins import BigIntPrimaryKey, Creatable, Updatable, UuidAltKey
 from .metadata import ArtifactMetadata
 
 if TYPE_CHECKING:
-    from .metadata import JSONValue
+    from .metadata import ArtifactMetadata, JSONValue
     from .task import ArtifactTask, ImportTask
 
 log = logging.getLogger(__name__)

@@ -229,6 +229,15 @@ wheels = [
 ]
 
 [[package]]
+name = "exiftool-wrapper"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c5/76/f0da48a88083bd2eb67ea0b764441167dff6aa4f646fa25d0489bec19b4e/exiftool_wrapper-0.3.0.tar.gz", hash = "sha256:990c5b2056ab75a68593439def6ba7a8fcb126efaefbb353f3ac58fba61e9f07", size = 23779, upload-time = "2025-09-25T02:53:44.158Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b4/bf/ce03fc3e667498e94e2ea8fd4fe85079727eb71af334ebde9cc66b3de6cd/exiftool_wrapper-0.3.0-py3-none-any.whl", hash = "sha256:5a079dd3fa2282563e35ee7da3a0e5f1a1930d7c5e8b7c436f901e17b37ed56d", size = 2505, upload-time = "2025-09-25T02:53:42.433Z" },
+]
+
+[[package]]
 name = "fastapi"
 version = "0.118.0"
 source = { registry = "https://pypi.org/simple" }
@@ -484,6 +493,7 @@ dependencies = [
     { name = "anyio" },
     { name = "click" },
     { name = "click-plugins" },
+    { name = "exiftool-wrapper" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
     { name = "pyyaml" },
@@ -523,6 +533,9 @@ dev = [
     { name = "toml" },
     { name = "tox" },
 ]
+tasks = [
+    { name = "exiftool-wrapper" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -532,6 +545,7 @@ requires-dist = [
     { name = "asyncpg", marker = "extra == 'api'", specifier = ">=0.27.0,<0.31.0" },
     { name = "click", specifier = ">=8.0.3,<9.0.0" },
     { name = "click-plugins", specifier = ">=1.1.1,<2.0.0" },
+    { name = "exiftool-wrapper", specifier = ">=0.3.0" },
     { name = "fastapi", marker = "extra == 'api'", specifier = ">=0.95,<0.119" },
     { name = "fastapi-pagination", extras = ["asyncpg", "sqlalchemy"], marker = "extra == 'api'", specifier = ">=0.13.0,<0.14.3" },
     { name = "greenlet", marker = "extra == 'api'", specifier = ">=3.0.0rc0,<4.0.0" },
@@ -561,6 +575,7 @@ dev = [
     { name = "toml", specifier = ">=0.10.2,<0.11.0" },
     { name = "tox", specifier = ">=3.24.4,<5.0.0" },
 ]
+tasks = [{ name = "exiftool-wrapper", specifier = ">=0.3.0" }]
 
 [[package]]
 name = "mirakuru"

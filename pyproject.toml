@@ -17,6 +17,7 @@ dependencies = [
     "pydantic<3.0.0,>=2.5.3",
     "anyio<5.0.0,>=4.3.0",
     "pydantic-settings<3.0.0,>=2.3.4",
+    "exiftool-wrapper>=0.3.0",
 ]
 
 [dependency-groups]
@@ -33,6 +34,9 @@ dev = [
     "coverage<8.0.0,>=7.4.1",
     "pytest-xdist<4.0.0,>=3.5.0",
     "pillow<12.0.0,>=10.4.0",
+]
+tasks = [
+    "exiftool-wrapper>=0.3.0",
 ]
 
 [project.optional-dependencies]
