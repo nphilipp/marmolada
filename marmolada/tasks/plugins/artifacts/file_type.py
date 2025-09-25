@@ -14,7 +14,7 @@ name = "file-type"
 
 
 async def process(*, db_session: AsyncSession, uuid: UUID) -> None:
-    log.debug("process(db_session=%s, uuid=%s)", db_session, uuid)
+    log.debug("%s/%s: %s", scope, name, uuid)
     artifact: Artifact = (
         await db_session.execute(select(Artifact).filter_by(uuid=uuid))
     ).scalar_one()

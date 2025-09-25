@@ -55,5 +55,5 @@ async def test_process(content_type, uppercase, tmp_path, caplog):
         await file_type.process(db_session=db_session, uuid=uuid)
 
     assert artifact.content_type == content_type
-    assert f"process(db_session=DB_SESSION, uuid={uuid})" in caplog.messages
+    assert f"artifact/file-type: {uuid}" in caplog.messages
     assert f"-> {content_type}" in caplog.messages
